@@ -128,6 +128,31 @@ nav{
 .proj-tags{display:flex;flex-wrap:wrap;gap:7px}
 .ptag{font-family:var(--heading);font-size:11px;background:var(--off);border:1px solid var(--border);color:var(--muted);padding:3px 11px;border-radius:20px}
 
+.project-image-wrap{padding:0 1.5rem 1.25rem}
+.project-image{
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:4px;
+  display:block;
+  margin-top:0.5rem;
+  box-shadow:0 4px 18px rgba(0,0,0,0.08);
+}
+.project-actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1rem}
+.project-link{
+  display:inline-block;
+  font-family:var(--heading);
+  font-size:12px;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:4px;
+  padding:10px 18px;
+  letter-spacing:0.04em;
+}
+.project-link.primary{background:var(--teal);color:var(--navy)}
+.project-link.secondary{border:1px solid var(--navy);color:var(--navy);background:transparent}
+.project-link:hover{opacity:0.86}
+
+
 /* dashboard mock */
 .dash-preview{background:#0c1e2c;border-radius:4px;padding:1.25rem;margin:0.5rem 1.5rem 1.25rem}
 .dash-lbl{font-family:var(--heading);font-size:9px;font-weight:700;color:var(--teal);letter-spacing:0.14em;margin-bottom:0.7rem}
@@ -476,42 +501,42 @@ p.lead{font-size:15px;color:var(--muted);max-width:660px;line-height:1.9;margin-
     <div class="proj-body">
       <div class="proj-header">
         <div>
-          <p class="proj-problem">FLAGSHIP PROJECT — Built from my own real 2026 trip records</p>
-          <p class="proj-name">2026 Trip Operations Dashboard</p>
+          <p class="proj-problem">FLAGSHIP PROJECT — End-to-end SQL + Tableau logistics analytics</p>
+          <p class="proj-name">Logistics &amp; Freight Data Analytics Portfolio</p>
         </div>
-        <span class="badge badge-wip">In Progress</span>
+        <span class="badge badge-done">Completed</span>
       </div>
-      <p class="proj-desc">I am designing and building a complete SQL database from scratch using my actual 2026 trucking trip logs. This is not a practice dataset — it is real operational data that I structured, entered, and am now querying and visualizing to answer questions that matter to any carrier business owner.</p>
-      <p class="proj-desc">The database tracks every trip: destination, origin, distance, date, day of week, load type, and revenue. I am building a full dashboard to answer these real business questions:</p>
+
+      <p class="proj-desc">
+        This project is a complete end-to-end data analytics portfolio built around logistics and freight operations. I created the dataset myself, organized the data, wrote SQL queries, created Tableau dashboards, documented each project, and published the full work on GitHub.
+      </p>
+
+      <p class="proj-desc">
+        The project includes six focused analyses: miles per carrier, monthly revenue, most frequent freight routes, trips by state, freight departures by weekday, and average miles per trip. The goal is to simulate real business reporting for transportation operations and show how data can support better decisions.
+      </p>
+
       <ul class="proj-questions">
-        <li>Which destinations are my most frequent routes — and are they also the most profitable?</li>
-        <li>What is my average trip distance, and how does distance affect revenue per mile?</li>
-        <li>Which day of the week is my busiest — and does busyness actually correlate with higher earnings?</li>
-        <li>What months and weeks had the highest operational volume in 2026?</li>
-        <li>Where am I losing money — long trips with low margins, or short trips with wasted deadhead miles?</li>
-        <li>What does my load mix look like — and which load types consistently perform best?</li>
+        <li>Which carriers completed the highest total miles?</li>
+        <li>How does revenue change month by month?</li>
+        <li>Which freight routes appear most often?</li>
+        <li>Which states have the highest trip activity?</li>
+        <li>Which weekdays have the most freight departures?</li>
+        <li>What is the average distance per freight trip?</li>
       </ul>
-    </div>
-    <div class="dash-preview">
-      <p class="dash-lbl">DASHBOARD PREVIEW — METRICS IN PROGRESS</p>
-      <div class="dash-metrics">
-        <div class="dash-m"><span class="dash-m-num">2026</span><span class="dash-m-lbl">Data Year</span></div>
-        <div class="dash-m"><span class="dash-m-num">Real</span><span class="dash-m-lbl">Data Source</span></div>
-        <div class="dash-m"><span class="dash-m-num">SQL</span><span class="dash-m-lbl">Query Engine</span></div>
-        <div class="dash-m"><span class="dash-m-num">Live</span><span class="dash-m-lbl">Building Now</span></div>
-      </div>
-      <p class="dash-lbl" style="margin-bottom:0.5rem">SAMPLE — TOP ROUTES BY VOLUME</p>
-      <div class="dash-bars">
-        <div class="db-row"><span class="db-dest">Indianapolis</span><div class="db-track"><div class="db-fill" style="width:85%"></div></div><span class="db-pct">85%</span></div>
-        <div class="db-row"><span class="db-dest">Milwaukee</span><div class="db-track"><div class="db-fill" style="width:68%"></div></div><span class="db-pct">68%</span></div>
-        <div class="db-row"><span class="db-dest">Detroit</span><div class="db-track"><div class="db-fill" style="width:52%"></div></div><span class="db-pct">52%</span></div>
-        <div class="db-row"><span class="db-dest">St. Louis</span><div class="db-track"><div class="db-fill" style="width:39%"></div></div><span class="db-pct">39%</span></div>
-        <div class="db-row"><span class="db-dest">Columbus</span><div class="db-track"><div class="db-fill" style="width:25%"></div></div><span class="db-pct">25%</span></div>
+
+      <div class="project-actions">
+        <a href="https://github.com/abdessamadbabakaidi/logistics-data-analytics-portfolio" target="_blank" class="project-link primary">View GitHub Project</a>
+        <a href="https://github.com/abdessamadbabakaidi/logistics-data-analytics-portfolio/tree/main/PROJECT/Final%20Dashboard" target="_blank" class="project-link secondary">View Final Dashboard Files</a>
       </div>
     </div>
+
+    <div class="project-image-wrap">
+      <img src="logistics_dashboard.png" alt="Final logistics analytics dashboard preview" class="project-image">
+    </div>
+
     <div class="proj-footer">
       <div class="proj-tags">
-        <span class="ptag">SQL</span><span class="ptag">Database Design</span><span class="ptag">Real Data</span><span class="ptag">BI Dashboard</span><span class="ptag">Logistics</span>
+        <span class="ptag">SQL</span><span class="ptag">Tableau</span><span class="ptag">Custom Dataset</span><span class="ptag">Data Visualization</span><span class="ptag">Logistics Analytics</span><span class="ptag">GitHub Portfolio</span>
       </div>
     </div>
   </div>
@@ -610,10 +635,15 @@ p.lead{font-size:15px;color:var(--muted);max-width:660px;line-height:1.9;margin-
       <div class="rb">
         <h4>PROJECTS</h4>
         <ul>
-          <li>2026 Trip Operations Dashboard (In Progress)</li>
-          <li>Trucking Route Performance Analysis (SQL)</li>
-          <li>Fleet Maintenance Cost Tracker (SQL + Excel)</li>
+          <li>Logistics &amp; Freight Data Analytics Portfolio (SQL + Tableau)</li>
+          <li>End-to-end analytics workflow using a custom logistics dataset</li>
+          <li>Published GitHub project with SQL queries, dashboards, screenshots, and documentation</li>
         </ul>
+        <p style="margin-top:0.5rem">
+          <a href="https://github.com/abdessamadbabakaidi/logistics-data-analytics-portfolio" target="_blank" style="color:#00BFDD;text-decoration:none;font-weight:700;">
+            View GitHub Portfolio
+          </a>
+        </p>
       </div>
       <div class="rb">
         <h4>CONTACT</h4>
